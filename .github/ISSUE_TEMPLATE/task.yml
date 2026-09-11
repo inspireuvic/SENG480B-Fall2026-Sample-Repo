@@ -56,22 +56,22 @@ body:
     validations:
       required: true
 
-  # - type: textarea
-  #   id: completion-evidence
-  #   attributes:
-  #     label: Completion Criteria and Evidence
-  #     description: Define how completion will be verified. Update the results and evidence as the Task progresses.
-  #     value: |
-  #       Completion criteria:
-  #       - [ ] The required work has been completed.
-  #       - [ ] The result has been reviewed or tested.
-  #       - [ ] Relevant evidence has been linked.
+  - type: textarea
+    id: completion-evidence
+    attributes:
+      label: Completion Criteria and Evidence
+      description: Define how completion will be verified. Update the results and evidence as the Task progresses.
+      value: |
+        Completion criteria:
+        - [ ] The required work has been completed.
+        - [ ] The result has been reviewed or tested.
+        - [ ] Relevant evidence has been linked.
 
-    #     Review or test result:
+        Review or test result:
 
-    #     Evidence link:
-    # validations:
-    #   required: true
+        Evidence link:
+    validations:
+      required: true
 
   # - type: textarea
   #   id: dependencies-constraints
