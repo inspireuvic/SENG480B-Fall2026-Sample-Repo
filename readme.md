@@ -3,6 +3,8 @@ Copy the entire .github/ISSUE_TEMPLATE folder, including all template files, int
 
 The folder contains scripts that automatically populate the appropriate issue template for a Value, Epic, Feature, User Story, or Task.
 
+Following is the folder structure containing the scripts needed.
+
 ```text
 .github/
 └── ISSUE_TEMPLATE/
