@@ -1,0 +1,118 @@
+name: Epic
+description: Record a broad stakeholder outcome that will be delivered through multiple Features
+title: "[Epic] "
+type: "Epic"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to record a broad stakeholder outcome that is too large to implement as one issue and must be divided into multiple Features.
+
+        After creating the Epic, use GitHub's **Sub-issues** section to create new Features or add existing Features.
+
+  - type: textarea
+    id: epic-outcome
+    attributes:
+      label: Epic Outcome and Context
+      description: Describe the current problem and the broad stakeholder outcome this Epic should achieve. Replace the bracketed text or update it as appropriate.
+      value: |
+        Current problem or opportunity:
+
+        Enable [stakeholder or stakeholder group] to [broad outcome] so that [benefit or impact].
+    validations:
+      required: true
+
+  - type: textarea
+    id: derivation-evidence
+    attributes:
+      label: Epic Derivation and Evidence
+      description: Briefly explain how stakeholders, the development team, and AI contributed to defining this Epic. Enter None if AI was not used.
+      value: |
+        Stakeholder or group:
+
+        What the stakeholder provided:
+
+        Development team contribution:
+
+        AI contribution, if any:
+
+        Evidence link:
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Define the current boundaries of this Epic so the team understands what is and is not included.
+      value: |
+        In scope:
+        -
+
+        Out of scope:
+        -
+    validations:
+      required: true
+
+  # - type: textarea
+  #   id: completion-criteria
+  #   attributes:
+  #     label: Epic Completion Criteria
+  #     description: State the high-level, verifiable conditions that must be satisfied before this Epic can be considered complete. Edit the checklist as needed.
+  #     value: |
+  #       - [ ] Required Features have been completed.
+  #       - [ ] The completed functionality has been tested.
+  #       - [ ] The intended stakeholder outcome has been evaluated.
+  #       - [ ] Relevant stakeholder feedback and resulting changes have been recorded.
+  #   validations:
+  #     required: true
+
+  - type: textarea
+    id: related-values
+    attributes:
+      label: Related Values
+      description: "Click in the field and type # to view and select existing Value issues. Add each Value on a separate line."
+      placeholder: "Type # to view and select existing Value issues."
+    validations:
+      required: false
+
+  - type: textarea
+    id: value-alignment
+    attributes:
+      label: Value Alignment
+      description: Briefly explain how this Epic supports or affects the related Values. Include any known tension or trade-off.
+      value: |
+        How this Epic supports or affects the related Values:
+
+        Known tension or trade-off:
+    validations:
+      required: false
+
+  - type: textarea
+    id: review-validation
+    attributes:
+      label: Review and Validation
+      description: Explain whether the Epic was reviewed with stakeholders and how any AI contribution was verified. Enter Not yet validated or Not applicable where appropriate.
+      value: |
+        Stakeholder validation:
+
+        How the AI contribution was verified:
+
+        Final outcome or changes made:
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        After creating this Epic:
+
+        1. Link this Epic from each related Value issue.
+        2. Under **Sub-issues**, select **Create sub-issue** to create a new Feature.
+        3. Alternatively, select **Add existing issue** to connect an existing Feature.
+        4. Use the native sub-issue relationship for the following hierarchy:
+
+           `Epic → Feature → User Story → Task`
+
+        5. Update this Epic when its scope, value alignment, stakeholder feedback, or completion criteria change.
