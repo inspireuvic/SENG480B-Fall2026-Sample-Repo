@@ -28,7 +28,7 @@ When creating an issue, select the appropriate template and complete all require
 
 The workflows folder contains an automated check for User Stories. If a User Story is closed before all Acceptance Criteria and Completion and Verification Criteria are checked, the workflow will automatically reopen it and add an explanatory comment.
 
-**Required Issue Hierarchy**
+## Required Issue Hierarchy ##
 Teams must organize and link issues using the following hierarchy:
 
 <!-- <diagram goes here> -->
