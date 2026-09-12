@@ -1,3 +1,5 @@
+## GitHub Issue Templates and Workflow ##
+
 This sample repository provides the GitHub issue templates and workflow that each team must use.
 Required Setup
 Copy the entire `.github` folder, including the `ISSUE_TEMPLATE` and `workflows` subfolders, into your team repository.
