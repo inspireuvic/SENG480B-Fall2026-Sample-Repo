@@ -4,7 +4,15 @@ Copy the entire `.github` folder, including the `ISSUE_TEMPLATE` and `workflows`
 The folder must have the following structure:
 
 ```text
-.github/ ├── ISSUE_TEMPLATE/ │ ├── value.yml │ ├── epic.yml │ ├── feature.yml │ ├── user-story.yml │ └── task.yml └── workflows/ └── enforce-user-story-completion.yml
+.github/
+├── ISSUE_TEMPLATE/
+│   ├── value.yml
+│   ├── epic.yml
+│   ├── feature.yml
+│   ├── user-story.yml
+│   └── task.yml
+└── workflows/
+    └── enforce-user-story-completion.yml
 ```
   You must follow the GitHub Issue hierarchy as show below. All type of issues templates are given and you should be able to automatically create any type of issue filling the necessary fields. Allows link the child talks to their immediate parent issue, eg: User story should be added as a sub issue to relevant feature. Any development task related to a user story should go as sub issue with t a issue type task.
 
