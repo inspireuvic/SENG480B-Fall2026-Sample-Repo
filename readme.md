@@ -37,7 +37,7 @@ The workflows folder contains an automated check for User Stories. If a User Sto
 
 Teams must organize and link issues using the following hierarchy:
 
-![GitHub issue hierarchy](issue-hierarchy.jpg)
+![GitHub issue hierarchy](issue_hierarchy.jpeg)
 
 Follow these rules:
 
