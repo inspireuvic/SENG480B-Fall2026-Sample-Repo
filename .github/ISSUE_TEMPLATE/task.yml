@@ -39,14 +39,23 @@ body:
     validations:
       required: true
 
+  - type: textarea
+    id: related-pull-requests
+    attributes:
+      label: Related Pull Request(s)
+      description: Link any pull requests associated with this Task. Leave this field blank if no pull request applies.
+      placeholder: "Example: #24 or https://github.com/organization/repository/pull/24"
+    validations:
+      required: false
+
   - type: markdown
     attributes:
       value: |
-        After creating this Task you can link to the parent issue:
+        After creating this Task, connect it to its parent issue:
 
         1. Open the relevant parent issue.
         2. Find the **Sub-issues** section.
-        3. Do not click the main **Create sub-issue** button because this prompts to create a new issue.
+        3. Do not click the main **Create sub-issue** button because it prompts you to create another issue.
         4. Click the small **▼ arrow** beside **Create sub-issue**.
         5. Select **Add existing issue**.
         6. Search for and select this Task.
