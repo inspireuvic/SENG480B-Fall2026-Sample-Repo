@@ -44,7 +44,7 @@ Teams must organize and link issues using the following hierarchy:
 
 Follow these rules:
 
-- Link each stakeholder Value issue to the relevant Epic or Epics 
+- Link each stakeholder Value issue to the relevant Epic(s) 
 - Add each Feature as a sub-issue of its immediate parent Epic.
 - Add each User Story as a sub-issue of its immediate parent Feature.
 - Add each Task as a sub-issue of its immediate parent User Story. A Task may be linked directly to a Feature or Epic only when no appropriate User Story exists.
