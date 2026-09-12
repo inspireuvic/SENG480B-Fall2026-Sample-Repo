@@ -1,0 +1,187 @@
+name: User Story
+description: Record a small, testable, stakeholder-focused product need
+title: "[User Story] "
+type: "User Story"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to record and maintain a small, stakeholder-focused need that can be implemented and tested independently.
+
+        Example:
+
+        `As a student, I want to preview my uploaded assignment so that I can confirm I submitted the correct file.`
+
+        Complete the planning sections when creating the User Story. Update the issue as stakeholder feedback, AI contributions, reviews, verification, and decisions occur.
+
+        Record implementation-level AI contributions in the related Task issues.
+
+  - type: textarea
+    id: user-story-context
+    attributes:
+      label: User Story and Context
+      description: Describe who needs something, what they need, why they need it, and any necessary context.
+      value: |
+        As a [stakeholder role], I want [need or capability] so that [reason or benefit].
+
+    validations:
+      required: true
+
+  - type: textarea
+    id: derivation-evidence
+    attributes:
+      label: User Story Derivation and Evidence
+      description: Explain where this User Story came from and provide supporting stakeholder evidence.
+      value: |
+        Stakeholder or group:
+
+        What we heard or observed:
+
+        How this evidence led to the User Story:
+
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: List observable and testable conditions that must be satisfied before this User Story is closed. Replace the bracketed text and add or remove criteria as needed.
+      value: |
+        - [ ] Given [starting condition], when [action occurs], then [expected result].
+        - [ ] Given [starting condition], when [action occurs], then [expected result].
+        - [ ] The completed User Story can be demonstrated and tested.
+        - [ ] The outcome has been reviewed against related stakeholder value, where applicable.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tech-value-alignment
+    attributes:
+      label: Tech–Value Alignment
+      description: Complete this section if the User Story supports a stakeholder value-related Feature. Otherwise, enter "Not applicable."
+      value: |
+
+        How this User Story supports or protects the stakeholder value:
+
+        Stakeholder input or evidence considered:
+
+        Possible value tension, risk, or trade-off:
+
+        Decision, change, or action taken:
+
+        How the value alignment was or will be reviewed:
+    validations:
+      required: true
+
+  - type: textarea
+    id: stakeholder-team-contributions
+    attributes:
+      label: Stakeholder, Team, and Other Contributions
+      description: Record who contributed to defining, refining, reviewing, or validating this User Story.
+      value: |
+        Stakeholder contribution or feedback:
+
+        Development team member(s) or other contributor(s):
+
+        Team or other contribution:
+
+        How these contributions affected the User Story:
+    validations:
+      required: true
+
+  - type: textarea
+    id: ai-use-contribution
+    attributes:
+      label: AI Use and Contribution
+      description: Describe the planned and actual role of AI in defining, refining, analysing, or validating this User Story. If AI was not used, enter "AI not used" and briefly explain why.
+      value: |
+        AI tool(s):
+
+        Expected AI contribution:
+
+        What AI actually did:
+
+        AI autonomy level: [Adivsor, Collaborator, Delegate, Agent]
+
+        Where the AI output was used:
+
+        If AI was not used, explain why:
+    validations:
+      required: true
+
+  - type: textarea
+    id: ai-review-verification
+    attributes:
+      label: Human Review and Verification of AI Work
+      description: Explain who reviewed the AI contribution, how it was verified, what problems were found, and what was changed. If AI was not used, enter "Not applicable."
+      value: |
+        Human reviewer(s):
+
+        Verification method:
+
+        Verification evidence or link:
+
+        Quality of the AI contribution:
+
+        Problems, errors, or incomplete information identified:
+
+        Anything initially convincing but later found to be wrong or incomplete:
+
+        Changes or corrections made:
+
+        Remaining uncertainty:
+    validations:
+      required: true
+
+  - type: textarea
+    id: ai-use-reflection
+    attributes:
+      label: Reflection on Working with AI
+      description: Briefly evaluate whether AI was appropriate for defining,refining and completing this User Story and what was learned from using or choosing not to use it.
+      value: |
+        Was AI an appropriate choice for this User Story? Why or why not?
+
+        What was useful or difficult about working with AI?
+
+        What would you do differently next time?
+    validations:
+      required: true
+
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!WARNING]
+        > Do not close this User Story until all acceptance criteria and every applicable completion criterion below have been completed and checked.
+        >
+        > User Stories closed with incomplete criteria may be automatically reopened.
+
+  - type: textarea
+    id: completion-criteria
+    attributes:
+      label: User Story Completion and Verification Criteria
+      description: Check every item before closing this User Story. If an item does not apply, explain why in the relevant section before checking it.
+      value: |
+        - [ ] All acceptance criteria have been satisfied and checked.
+        - [ ] The Tech–Value Alignment section has been completed for a value-related User Story, or marked "Not applicable."
+        - [ ] The completed outcome has been demonstrated and tested.
+        - [ ] Stakeholder, development team, and other contributions have been recorded.
+        - [ ] Stakeholder review or validation has been completed and documented.
+        - [ ] The actual AI contribution, or the decision not to use AI, has been recorded.
+        - [ ] Human review and verification of the AI contribution have been recorded, or marked "Not applicable."
+        - [ ] AI-related problems, corrections, and remaining uncertainties have been recorded.
+        - [ ] The team has reflected on whether AI was appropriate for this User Story.
+
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        After creating this User Story:
+
+        1. Open its parent Feature.
+        2. Under **Sub-issues**, select **Add existing issue** and add this User Story.
+        3. Under this User Story's **Sub-issues**, select **Create sub-issue** to create a new Task or **Add existing issue** to connect an existing Task.
