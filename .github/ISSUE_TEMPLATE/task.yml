@@ -40,7 +40,7 @@ body:
       required: true
 
   - type: textarea
-    id: related-pull-requests or additional details
+    id: related-links-details
     attributes:
       label: Related Pull Request(s) and details
       description: Link related pull requests or provide any other relevant information. Leave blank if none.
