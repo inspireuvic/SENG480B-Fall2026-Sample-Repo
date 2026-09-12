@@ -16,7 +16,11 @@ The folder must have the following structure:
 └── workflows/
     └── enforce-user-story-completion.yml
 ```
-  You must follow the GitHub Issue hierarchy as show below. All type of issues templates are given and you should be able to automatically create any type of issue filling the necessary fields. Allows link the child talks to their immediate parent issue, eg: User story should be added as a sub issue to relevant feature. Any development task related to a user story should go as sub issue with t a issue type task.
+Templates are provided for all issue types. Select the appropriate template and complete all required fields when creating an issue.
+
+- Link each child issue to its immediate parent. For example:
+   - Add each User Story as a sub-issue of the relevant Feature.
+   - Add each development Task as a sub-issue of the relevant User Story, using the Task issue type.
 
 The **ISSUE_TEMPLATE** folder contains forms for creating the following GitHub issue types:
 - Value
