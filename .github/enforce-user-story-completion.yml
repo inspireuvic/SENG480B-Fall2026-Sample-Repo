@@ -1,0 +1,102 @@
+name: Enforce User Story Completion
+
+on:
+  issues:
+    types:
+      - closed
+
+permissions:
+  issues: write
+
+jobs:
+  verify-user-story:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Reopen incomplete User Story
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const body = issue.body || "";
+            const title = issue.title || "";
+
+            // Apply this workflow only to User Stories.
+            if (!title.startsWith("[User Story]")) {
+              return;
+            }
+
+            const requiredSections = [
+              "Acceptance Criteria",
+              "User Story Completion and Verification Criteria"
+            ];
+
+            function getSection(sectionName) {
+              const heading = `### ${sectionName}`;
+              const start = body.indexOf(heading);
+
+              if (start === -1) {
+                return null;
+              }
+
+              const remainingBody = body.slice(start + heading.length);
+              const nextHeading = remainingBody.search(/\n###\s/);
+
+              return nextHeading === -1
+                ? remainingBody
+                : remainingBody.slice(0, nextHeading);
+            }
+
+            const missingSections = [];
+            const incompleteSections = [];
+
+            for (const sectionName of requiredSections) {
+              const section = getSection(sectionName);
+
+              if (section === null) {
+                missingSections.push(sectionName);
+                continue;
+              }
+
+              if (/^\s*-\s*\[\s\]/im.test(section)) {
+                incompleteSections.push(sectionName);
+              }
+            }
+
+            if (
+              missingSections.length === 0 &&
+              incompleteSections.length === 0
+            ) {
+              return;
+            }
+
+            await github.rest.issues.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              state: "open"
+            });
+
+            const messages = [];
+
+            if (missingSections.length > 0) {
+              messages.push(
+                `Missing required section(s): ${missingSections.join(", ")}.`
+              );
+            }
+
+            if (incompleteSections.length > 0) {
+              messages.push(
+                `Unchecked criteria remain in: ${incompleteSections.join(", ")}.`
+              );
+            }
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue.number,
+              body:
+                "This User Story was automatically reopened.\n\n" +
+                messages.join("\n\n") +
+                "\n\nComplete and check all required criteria before closing it."
+            });
