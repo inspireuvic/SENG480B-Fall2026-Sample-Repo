@@ -39,7 +39,7 @@ Teams must organize and link issues using the following hierarchy:
 
 <img src="issue_hierarchy.jpeg"
      alt="GitHub issue hierarchy"
-     width="500"
+     width="400"
      height="500">
 
 Follow these rules:
