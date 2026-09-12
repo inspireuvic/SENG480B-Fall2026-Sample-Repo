@@ -1,0 +1,52 @@
+name: Task
+description: Record a specific development, design, testing, or other project task
+title: "[Task] "
+type: "Task"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to record a specific piece of project work.
+
+        This template can be used for development, design, architecture, testing, research, documentation, deployment, stakeholder engagement, project management, or other tasks.
+
+  - type: dropdown
+    id: task-type
+    attributes:
+      label: Task Type
+      description: Select the category that best describes this Task.
+      options:
+        - Development
+        - User interface or experience design
+        - Architecture
+        - Testing or quality assurance
+        - Research or investigation
+        - Documentation
+        - Deployment or infrastructure
+        - Stakeholder engagement
+        - Project management
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: task-outcome
+    attributes:
+      label: Task and Expected Outcome
+      description: Briefly describe the task and its expected outcome.
+      placeholder: Describe the work to be completed and the expected result.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        After creating this Task you can link to the parent issue:
+
+        1. Open the relevant parent issue.
+        2. Find the **Sub-issues** section.
+        3. Do not click the main **Create sub-issue** button because this prompts to create a new issue.
+        4. Click the small **▼ arrow** beside **Create sub-issue**.
+        5. Select **Add existing issue**.
+        6. Search for and select this Task.
