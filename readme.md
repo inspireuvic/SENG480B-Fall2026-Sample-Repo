@@ -28,16 +28,19 @@ The **ISSUE_TEMPLATE** folder contains forms for creating the following GitHub i
 - Feature
 - User Story
 - Task
+
 When creating an issue, select the appropriate template and complete all required fields. The template will automatically provide the required issue structure and prompts.
 
 The workflows folder contains an automated check for User Stories. If a User Story is closed before all Acceptance Criteria and Completion and Verification Criteria are checked, the workflow will automatically reopen it and add an explanatory comment.
 
 ## Required Issue Hierarchy ##
+
 Teams must organize and link issues using the following hierarchy:
 
 <!-- <diagram goes here> -->
 
 Follow these rules:
+
 - Link each stakeholder Value issue to the relevant Epic or Epics 
 - Add each Feature as a sub-issue of its immediate parent Epic.
 - Add each User Story as a sub-issue of its immediate parent Feature.
@@ -46,6 +49,7 @@ Follow these rules:
 - Update issues throughout the project as contributions, decisions, verification, and outcomes change.
 
 **Connecting an Existing Child Issue**
+
 If the child issue has already been created using a template:
 - Open its immediate parent issue.
 - Find the Sub-issues section.
