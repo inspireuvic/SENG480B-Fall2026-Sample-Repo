@@ -1,0 +1,119 @@
+name: Feature
+description: Record a product capability that contributes to an Epic
+title: "[Feature] "
+type: "Feature"
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form to describe a meaningful product capability that contributes to an Epic.
+
+        Value alignment is recorded in the parent Epic and carried through the issue hierarchy:
+
+        `Value ↔ Epic → Feature → User Story`
+
+  - type: textarea
+    id: capability-behaviour
+    attributes:
+      label: Feature Capability and Expected Behaviour
+      description: Describe the capability, its intended benefit, and the main product behaviour. Replace the bracketed text or update as appropriate.
+      value: |
+        Provide [capability] for [stakeholder or user group] so that [intended benefit or outcome].
+
+        The product should:
+        -
+        -
+    validations:
+      required: true
+
+  - type: textarea
+    id: derivation-evidence
+    attributes:
+      label: Feature Derivation and Evidence
+      description: Briefly explain how stakeholders, the development team, and AI contributed to defining this Feature. Enter None if AI was not used.
+      value: |
+        Stakeholder or group:
+
+        What the stakeholder provided:
+
+        Development team contribution:
+
+        AI contribution, if any:
+
+        Evidence link:
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: List the specific, testable conditions that must be satisfied for this Feature to be considered complete. Edit the checklist as needed.
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  # - type: textarea
+  #   id: scope-constraints
+  #   attributes:
+  #     label: Scope and Constraints
+  #     description: Clarify the boundaries, constraints, or risks when they are important for implementing this Feature.
+  #     value: |
+  #       In scope:
+  #       -
+
+  #       Out of scope:
+  #       -
+
+  #       Constraints or risks:
+  #       -
+  #   validations:
+  #     required: false
+
+  # - type: textarea
+  #   id: additional-value-considerations
+  #   attributes:
+  #     label: Additional Value Considerations
+  #     description: Record only value impacts, tensions, or decisions specific to this Feature that are not already documented in the parent Epic. Enter None if there are no additional considerations.
+  #     value: |
+  #       Additional value consideration:
+
+  #       Related decision or trade-off:
+  #   validations:
+  #     required: false
+
+  - type: textarea
+    id: review-validation
+    attributes:
+      label: Review and Validation
+      description: Explain whether the Feature was reviewed with stakeholders and how any AI contribution was verified. Enter Not yet validated or Not applicable where appropriate.
+      value: |
+        Stakeholder validation:
+
+        How the AI contribution was verified:
+
+        Final outcome or changes made:
+    validations:
+      required: true
+
+  # - type: checkboxes
+  #   id: confirmation
+  #   attributes:
+  #     label: Submission Confirmation
+  #    options:
+  #      - label: I reviewed this Feature for clarity, feasibility, testability, and alignment with the available stakeholder evidence.
+  #        required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        After creating this Feature:
+
+        1. Open its parent Epic.
+        2. Under **Sub-issues**, select **Add existing issue** and add this Feature.
+        3. Under this Feature's **Sub-issues**, select **Create sub-issue** to create a new User Story or **Add existing issue** to connect an existing User Story.
+        4. Update this Feature when its scope, stakeholder feedback, acceptance criteria, or value considerations change.
