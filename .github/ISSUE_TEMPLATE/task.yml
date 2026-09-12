@@ -40,10 +40,10 @@ body:
       required: true
 
   - type: textarea
-    id: related-pull-requests
+    id: related-pull-requests or additional details
     attributes:
-      label: Related Pull Request(s)
-      description: Link any pull requests associated with this Task. Leave this field blank if no pull request applies.
+      label: Related Pull Request(s) and details
+      description: Link related pull requests or provide any other relevant information. Leave blank if none.
       placeholder: "Example: #24 or https://github.com/organization/repository/pull/24"
     validations:
       required: false
