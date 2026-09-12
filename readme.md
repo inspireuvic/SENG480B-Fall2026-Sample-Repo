@@ -41,8 +41,8 @@ Teams must organize and link issues using the following hierarchy:
      alt="GitHub issue hierarchy"
      width="400"
      height="500">
-
-Follow these rules:
+     
+**Follow these rules when creating and maintaining GitHub issues:**
 
 - Link each stakeholder Value issue to the relevant Epic(s) 
 - Add each Feature as a sub-issue of its immediate parent Epic.
