@@ -13,9 +13,14 @@ body:
 
         `As a student, I want to preview my uploaded assignment so that I can confirm I submitted the correct file.`
 
-        Complete the planning sections when creating the User Story. Update the issue as stakeholder feedback, AI contributions, reviews, verification, and decisions occur.
-
         Record implementation-level AI contributions in the related Task issues.
+
+  - type: markdown
+    attributes:
+      value: |
+        # Complete When Creating the User Story
+
+        Complete the following sections when creating the User Story. These sections define the stakeholder need, supporting evidence, and conditions required for completion.
 
   - type: textarea
     id: user-story-context
@@ -24,7 +29,6 @@ body:
       description: Describe who needs something, what they need, why they need it, and any necessary context.
       value: |
         As a [stakeholder role], I want [need or capability] so that [reason or benefit].
-
     validations:
       required: true
 
@@ -39,7 +43,6 @@ body:
         What we heard or observed:
 
         How this evidence led to the User Story:
-
     validations:
       required: true
 
@@ -47,22 +50,28 @@ body:
     id: acceptance-criteria
     attributes:
       label: Acceptance Criteria
-      description: List observable and testable conditions that must be satisfied before this User Story is closed. Replace the bracketed text and add or remove criteria as needed.
+      description: Define observable and testable conditions when creating the User Story. Check each criterion as it is satisfied and ensure all criteria are checked before closing the User Story.
       value: |
         - [ ] Given [starting condition], when [action occurs], then [expected result].
         - [ ] Given [starting condition], when [action occurs], then [expected result].
         - [ ] The completed User Story can be demonstrated and tested.
-        - [ ] The outcome has been reviewed against related stakeholder value, where applicable.
+        - [ ] The outcome has been reviewed against any related stakeholder value, where applicable.
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        # Update During Development and Complete Before Closing
+
+        Update the following sections as the work progresses. Complete all applicable sections before closing the User Story.
 
   - type: textarea
     id: tech-value-alignment
     attributes:
       label: Tech–Value Alignment
-      description: Complete this section if the User Story supports a stakeholder value-related Feature. Otherwise, enter "Not applicable."
+      description: Complete this section if the User Story supports a stakeholder value-related Feature. Record the initial alignment considerations and update the decisions, actions, and review results before closing. Otherwise, enter "Not applicable."
       value: |
-
         How this User Story supports or protects the stakeholder value:
 
         Stakeholder input or evidence considered:
@@ -71,15 +80,17 @@ body:
 
         Decision, change, or action taken:
 
-        How the value alignment was or will be reviewed:
+        How the value alignment was reviewed:
+
+        Review outcome or resulting changes:
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: stakeholder-team-contributions
     attributes:
       label: Stakeholder, Team, and Other Contributions
-      description: Record who contributed to defining, refining, reviewing, or validating this User Story.
+      description: Record who contributed to defining, refining, reviewing, validating, or completing this User Story. Update this section before closing.
       value: |
         Stakeholder contribution or feedback:
 
@@ -89,13 +100,13 @@ body:
 
         How these contributions affected the User Story:
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: ai-use-contribution
     attributes:
       label: AI Use and Contribution
-      description: Describe the planned and actual role of AI in defining, refining, analysing, or validating this User Story. If AI was not used, enter "AI not used" and briefly explain why.
+      description: Record the expected AI contribution when creating or planning the User Story. Update this section with what AI actually did before closing it. If AI was not used, enter "AI not used" and briefly explain why.
       value: |
         AI tool(s):
 
@@ -103,13 +114,13 @@ body:
 
         What AI actually did:
 
-        AI autonomy level: [Adivsor, Collaborator, Delegate, Agent]
+        AI autonomy level: [Advisor, Collaborator, Delegate, or Agent]
 
         Where the AI output was used:
 
         If AI was not used, explain why:
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: ai-review-verification
@@ -133,13 +144,13 @@ body:
 
         Remaining uncertainty:
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: ai-use-reflection
     attributes:
       label: Reflection on Working with AI
-      description: Briefly evaluate whether AI was appropriate for defining,refining and completing this User Story and what was learned from using or choosing not to use it.
+      description: Briefly evaluate whether AI was appropriate for defining, refining, and completing this User Story and what was learned from using or choosing not to use it.
       value: |
         Was AI an appropriate choice for this User Story? Why or why not?
 
@@ -147,16 +158,15 @@ body:
 
         What would you do differently next time?
     validations:
-      required: true
-
+      required: false
 
   - type: markdown
     attributes:
       value: |
         > [!WARNING]
-        > Do not close this User Story until all acceptance criteria and every applicable completion criterion below have been completed and checked.
+        > Do not close this User Story until all Acceptance Criteria and every applicable Completion and Verification Criterion below have been completed and checked.
         >
-        > User Stories closed with incomplete criteria may be automatically reopened.
+        > User Stories closed with unchecked criteria will be automatically reopened.
 
   - type: textarea
     id: completion-criteria
@@ -164,16 +174,15 @@ body:
       label: User Story Completion and Verification Criteria
       description: Check every item before closing this User Story. If an item does not apply, explain why in the relevant section before checking it.
       value: |
-        - [ ] All acceptance criteria have been satisfied and checked.
+        - [ ] All Acceptance Criteria have been satisfied and checked.
         - [ ] The Tech–Value Alignment section has been completed for a value-related User Story, or marked "Not applicable."
         - [ ] The completed outcome has been demonstrated and tested.
         - [ ] Stakeholder, development team, and other contributions have been recorded.
         - [ ] Stakeholder review or validation has been completed and documented.
         - [ ] The actual AI contribution, or the decision not to use AI, has been recorded.
         - [ ] Human review and verification of the AI contribution have been recorded, or marked "Not applicable."
-        - [ ] AI-related problems, corrections, and remaining uncertainties have been recorded.
+        - [ ] AI-related problems, corrections, and remaining uncertainties have been recorded, or marked "Not applicable."
         - [ ] The team has reflected on whether AI was appropriate for this User Story.
-
     validations:
       required: true
 
@@ -183,5 +192,9 @@ body:
         After creating this User Story:
 
         1. Open its parent Feature.
-        2. Under **Sub-issues**, select **Add existing issue** and add this User Story.
-        3. Under this User Story's **Sub-issues**, select **Create sub-issue** to create a new Task or **Add existing issue** to connect an existing Task.
+        2. Find the **Sub-issues** section.
+        3. Click the small **▼ arrow** beside **Create sub-issue**.
+        4. Select **Add existing issue** and add this User Story.
+        5. Under this User Story's **Sub-issues**, select **Create sub-issue** to create a new Task or use **Add existing issue** to connect an existing Task.
+        6. Update this User Story as the work progresses.
+        7. Complete and check all Acceptance Criteria and Completion and Verification Criteria before closing the User Story.
