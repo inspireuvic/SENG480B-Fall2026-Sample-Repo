@@ -1,7 +1,23 @@
-## GitHub Issue Templates and Workflow ##
+## Sample Repository
+
+Use this sample repository as a guide when creating and organizing your team’s project repository.
+
+### Team Repository Structure
+
+Create a repository with a structure similar to the following. Replace `<Sample-Repo>` with the name selected by your team.
+
+```text
+SENG480B-Fall2026-<Sample-Repo>
+├── .github/
+├── deliverables/
+├── supportive_documents
+```
+
+### GitHub Issue Templates and Workflow ###
 
 This sample repository provides the GitHub issue templates and workflow that each team must use.
-Required Setup
+
+**Required Setup**
 Copy the entire `.github` folder, including the `ISSUE_TEMPLATE` and `workflows` subfolders, into your team repository.
 The folder must have the following structure:
 
@@ -33,7 +49,7 @@ When creating an issue, select the appropriate template and complete all require
 
 The workflows folder contains an automated check for User Stories. If a User Story is closed before all Acceptance Criteria and Completion and Verification Criteria are checked, the workflow will automatically reopen it and add an explanatory comment.
 
-## Required Issue Hierarchy ##
+### Required Issue Hierarchy ###
 
 Teams must organize and link issues using the following hierarchy:
 
